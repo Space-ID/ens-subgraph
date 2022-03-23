@@ -8,11 +8,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: ENSRegistry
-    network: chapel
+    network: rinkeby
     source:
-      address: '0x60fcB83fAd91335EBf6e9bB81d79b973bf3DA3e2'
+      address: '0x4831d689843e4e02448ae323718D86BD58e0aD47'
       abi: EnsRegistry
-      startBlock: 1700000
+      startBlock: 10000000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -36,11 +36,11 @@ dataSources:
           handler: handleNewTTL
   - kind: ethereum/contract
     name: Resolver
-    network: chapel 
+    network: rinkeby 
     source:
-      address: '0x0331Ed2587de10D9612ddA3269aa588ab924f04E'
+      address: '0x6911F168f058d29bd190B566161578Ce377b6032'
       abi: Resolver
-      startBlock: 17000000 
+      startBlock: 10000000 
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -77,11 +77,11 @@ dataSources:
           handler: handleTextChanged
   - kind: ethereum/contract
     name: BaseRegistrar
-    network: chapel 
+    network: rinkeby 
     source:
-      address: '0x74d00F4De30a65FdbeCA0FBcFB17C1201cb176b9'
+      address: '0xDcA242F115bF2672ecDe018222800f163B2A1158'
       abi: BaseRegistrar
-      startBlock: 17000000 
+      startBlock: 10000000 
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -104,11 +104,11 @@ dataSources:
           handler: handleNameTransferred
   - kind: ethereum/contract
     name: EthRegistrarController
-    network: chapel 
+    network: rinkeby 
     source:
-      address: '0xbfdD21FF3CD29797e15445c0d70a63795E0F9C14'
+      address: '0x8413855b38791fABA6548beAD900996180E5E850'
       abi: EthRegistrarController
-      startBlock: 17000000 
+      startBlock: 10000000 
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5

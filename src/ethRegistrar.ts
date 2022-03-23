@@ -25,7 +25,7 @@ import {
 // Import entity types generated from the GraphQL schema
 import { Account, Domain, Registration, NameRegistered, NameRenewed, NameTransferred } from './types/schema'
 
-var rootNode:ByteArray = byteArrayFromHex("93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae")
+var rootNode:ByteArray = byteArrayFromHex("dba5666821b22671387fe7ea11d7cc41ede85a5aa67c3e7b3d68ce6a661f389c")
 
 export function handleNameRegistered(event: NameRegisteredEvent): void {
   let account = new Account(event.params.owner.toHex())
@@ -57,7 +57,7 @@ export function handleNameRegisteredByController(event: ControllerNameRegistered
   let domain = Domain.load(crypto.keccak256(concat(rootNode, event.params.label)).toHex())!
   if(domain.labelName !== event.params.name) {
     domain.labelName = event.params.name
-    domain.name = event.params.name + '.eth'
+    domain.name = event.params.name + '.bnb'
     domain.save()
   }
 
@@ -72,7 +72,7 @@ export function handleNameRenewedByController(event: ControllerNameRenewedEvent)
   let domain = Domain.load(crypto.keccak256(concat(rootNode, event.params.label)).toHex())!
   if(domain.labelName !== event.params.name) {
     domain.labelName = event.params.name
-    domain.name = event.params.name + '.eth'
+    domain.name = event.params.name + '.bnb'
     domain.save()
   }
 
